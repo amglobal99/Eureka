@@ -350,6 +350,7 @@ class RowsExampleViewController: FormViewController {
       /// ******************** JAck Section *******************
       
       var hobby: PickerInputRow<String>!
+      
       //var byear: SelectorRow<String>!
       //var cyear:SelectR
       
@@ -360,7 +361,10 @@ class RowsExampleViewController: FormViewController {
         $0.value = "*****"
         } .onCellSelection({ (cell, row) -> () in
           //self.lookup(0);
-          print("yes ......")
+          print("yes ......\(row.value)")
+          
+          
+          
           
         })
       
