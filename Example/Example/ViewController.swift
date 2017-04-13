@@ -39,7 +39,15 @@ class HomeViewController : FormViewController {
            cell.accessoryView?.layer.cornerRadius = 17
            cell.accessoryView?.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
         }
-        
+      
+      
+      
+      
+      
+      
+      
+      
+      
         form =
             
             Section() {
@@ -359,7 +367,8 @@ class RowsExampleViewController: FormViewController {
         $0.title = "Hobby"
         $0.options = ["d","J","h","y"]
         $0.value = "*****"
-        } .onCellSelection({ (cell, row) -> () in
+       //  } .onCellSelection({ (cell, row) -> () in
+           } .onCellSelection({ (cell, row) in
           //self.lookup(0);
           print("yes ......\(row.value)")
           
@@ -1221,7 +1230,9 @@ class ValidationsController: FormViewController {
                     }
                     .cellUpdate { cell, row in
                         if !row.isValid {
-                            cell.titleLabel?.textColor = .red
+                           cell.titleLabel?.textColor = .red
+                          cell.backgroundColor = UIColor.yellow
+                          
                         }
                     }
             
